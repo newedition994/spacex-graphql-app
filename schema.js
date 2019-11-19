@@ -1,3 +1,5 @@
+const axios = require("axios");
+
 const {
   GraphqlObjectType,
   GraphQLInt,
@@ -17,5 +19,15 @@ const LaunchType = GraphqlObjectType({
     launch_date_local: { type: GraphQLString },
     launch_success: { type: GraphQLBoolean },
     rocket: { type: RocketType }
+  })
+});
+
+// rocket type
+const RocketType = GraphqlObjectType({
+  name: "Rocket",
+  fields: () => ({
+    rocket_id: { type: GraphQLString },
+    rocket_name: { type: GraphQLString },
+    rocket_type: { type: GraphQLString }
   })
 });
