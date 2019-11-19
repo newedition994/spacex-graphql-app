@@ -31,3 +31,18 @@ const RocketType = GraphqlObjectType({
     rocket_type: { type: GraphQLString }
   })
 });
+
+// root query
+const RootQuery = new GraphqlObjectType({
+  name: "RootQueryType",
+  fields: {
+    launches: {
+      type: new GraphQLList(LaunchType),
+      resolve(parent, args) {
+        return axios
+          .get("https://api.spacexdata.com/v3/launches")
+          .then(res => res.data);
+      }
+    }
+  }
+});
