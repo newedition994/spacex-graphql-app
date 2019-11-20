@@ -9,10 +9,10 @@
 yarn add
 cd client && yarn add
 
-# Run server & client (:3000 & :5000)
+# Run server & client (:3000 & :8081)
 yarn run dev
 
-# Server only (:5000)
+# Server only (:8081)
 yarn run server
 
 # Client only (:3000)
@@ -21,5 +21,5 @@ yarn run client
 # Build for production (Builds into server ./public)
 cd client && yarn run build
 
-# Graphiql - http://localhost:5000/graphql
+# Graphiql - http://localhost:8081/graphql
 ```
