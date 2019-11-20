@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
+
+import Launches from "./components/Launches";
+
 import logo from "./logo.png";
 import "./App.css";
 
 const client = new ApolloClient({
-  uri: "http://localhost:5000/graphql"
+  uri: "http://localhost:8081/graphql"
 });
 
 class App extends Component {
@@ -19,6 +22,7 @@ class App extends Component {
             style={{ width: 300, display: "block", margin: "auto" }}
           />
         </div>
+        <Launches />
       </ApolloProvider>
     );
   }
