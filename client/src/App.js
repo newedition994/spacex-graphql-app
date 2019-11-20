@@ -21,8 +21,8 @@ class App extends Component {
             alt="SpaceX"
             style={{ width: 300, display: "block", margin: "auto" }}
           />
+          <Launches />
         </div>
-        <Launches />
       </ApolloProvider>
     );
   }
