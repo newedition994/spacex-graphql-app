@@ -20,7 +20,9 @@ export default function LaunchItem({
               {mission_name}
             </span>
           </h4>
-          <p>Date: {launch_date_local}</p>
+          <p>
+            Date: <Moment format="YYYY-MM-DD HH:mm">{launch_date_local}</Moment>
+          </p>
         </div>
         <div className="col-md-3">
           <button className="btn btn-secondary">Launch Details</button>
