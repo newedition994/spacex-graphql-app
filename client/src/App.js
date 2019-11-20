@@ -1,11 +1,11 @@
 import React from "react";
-
+import logo from "./logo.png";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>SpaceX</h1>
+      <img src={logo} alt="" />
     </div>
   );
 }
